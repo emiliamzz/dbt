@@ -1,7 +1,6 @@
 sources:
   - name: landing
     description: The primary source system for order management system(OMS) data analytics.
-    database: sleekmart
     schema: L1_LANDING
     config:
       freshness:
@@ -10,36 +9,35 @@ sources:
     loaded_at_field: Updated_at
 
     tables:
-      - name: customers
+      - name: CUSTOMERS
         description: The customers table from order management system(OMS).
-        identifier: customers
-      - name: orders
+        identifier: CUSTOMERS
+      - name: ORDERS
         description: The orders table from order management system(OMS).
-        identifier: orders
-      - name: orderitems
+        identifier: ORDERS
+      - name: ORDERITEMS
         description: The orderitems table from order management system(OMS).
-        identifier: orderitems
-      - name: employees
+        identifier: ORDERITEMS
+      - name: EMPLOYEES
         description: The employees table from order management system(OMS).
-        identifier: employees
+        identifier: EMPLOYEES
         columns:
-          - name: address
+          - name: ADDRESS
             description: Full Address of emplyees for Transport Arrangements.
             tests:
               - not_null
               - string_not_empty
-      - name: sales_us
-      - name: sales_europe
-      - name: sales_asia
-      - name: stores
-      - name: suppliers
-      - name: products
+      - name: SALES_US
+      - name: SALES_EUROPE
+      - name: SALES_ASIA
+      - name: STORES
+      - name: SUPPLIERS
+      - name: PRODUCTS
 
-  - name: training
-    database: sleekdata
+  - name: TRAINING
     schema: TRAINING
     tables:
-      - name: city_temperature
+      - name: CITY_TEMPERATURE
       - name: sales_us
       - name: sales_uk
       - name: sales_india
